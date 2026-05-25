@@ -57,7 +57,7 @@ Sistema de gestión de bibliotecas digitales basado en una arquitectura de micro
    ./mvnw spring-boot:run
 
    # Terminal 3 - Pagos
-   cd pagos-service/pagos-service
+   cd pagos-service
    ./mvnw spring-boot:run
 
    # Terminal 4 - Reservas
