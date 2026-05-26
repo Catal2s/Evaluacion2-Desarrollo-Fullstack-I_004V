@@ -1,14 +1,8 @@
-# Sistema de Gestión de Bibliotecas Digitales
+# Gestion Biblioteca - readme.javier_cataldo
 
-Sistema de gestión de bibliotecas digitales basado en una arquitectura de microservicios con Spring Boot, JPA/Hibernate y MySQL.
+Sistema de gestión de bibliotecas digitales basado en una arquitectura de microservicios con Spring Boot, JPA/Hibernate y MySQL (utilizando Laragon), el contenido del readme es acerca de los 5 microservicios creados para la segunda prueba de desarrollo fullstack.
 
-## Integrantes
-
-- Cristóbal González
-- Javier Cataldo
-- Vicente Barrera
-
-## Microservicios
+## Microservicios.
 
 | Microservicio  | Puerto | Descripción                                                                    |
 | -------------- | ------ | ------------------------------------------------------------------------------ |
@@ -18,36 +12,36 @@ Sistema de gestión de bibliotecas digitales basado en una arquitectura de micro
 | reservas-service | 8084   | Gestión de reservas de libros (reservar y cancelar reservas)                   |
 | multas-service | 8085   | Gestión de multas (generar multas por devolución tardía y registrar pagos)     |
 
-## Tecnologías
+## Tecnologías utilizadas.
 
-- Java 21
+- Java 21 # Versión LTS de Java utilizada para el desarrollo, aprovechando características modernas como records, pattern matching y mejora de rendimiento
 - Spring Boot 3.4.5
-- JPA + Hibernate
-- MySQL 8
-- Bean Validation (JSR 380)
-- WebClient (comunicación entre microservicios)
-- SLF4J (Logging)
-- Maven
+- JPA + Hibernate # ORM (Object-Relational Mapping) que mapea las entidades Java a tablas MySQL, automatizando las operaciones CRUD y consultas
+- MySQL 8 (Laragon)
+- Bean Validation (JSR 380) # Validación de datos de entrada mediante anotaciones (@Valid, @NotBlank, @Email, etc.) en los DTOs de cada microservicio
+- WebClient (comunicación entre microservicios) 
+- SLF4J (Logging) # Interfaz de logging para registrar eventos, errores y depuración en la consola de cada microservicio
+- Maven # Herramienta de construcción y gestión de dependencias, encargada de compilar, empaquetar y administrar las librerías del proyecto
 
 ## Requisitos previos
 
 - Java 21
-- MySQL 8 (Laragon recomendado)
+- Laragon (recomendado)
 - Maven
 
-## Pasos para ejecutar
+## Pasos para ejecutar Gestion Biblioteca.
 
-1. Iniciar MySQL (Laragon) y asegurarse de que esté corriendo en el puerto 3306.
+1. Iniciar MySQL (Laragon) y asegurarse de que esté corriendo en el puerto 3306. Abrir el GitBash y buscar tu carpeta de preferencia para guardar tu Gestion Biblioteca!
 
 2. Clonar el repositorio:
-   ```bash
+   ```gitbash
    git clone <url-del-repositorio>
    cd GestionBiblioteca
    ```
 
 3. Abrir cada microservicio en terminales separadas y ejecutar:
 
-   ```bash
+   ```gitbash
    # Terminal 1 - Socios
    cd socios-service
    ./mvnw spring-boot:run
@@ -69,9 +63,9 @@ Sistema de gestión de bibliotecas digitales basado en una arquitectura de micro
    ./mvnw spring-boot:run
    ```
 
-   > **Nota:** Las bases de datos se crean automáticamente gracias a la configuración `createDatabaseIfNotExist=true` y `spring.jpa.hibernate.ddl-auto=update`.
+   > **!** Las bases de datos se crean automáticamente gracias a la configuración `createDatabaseIfNotExist=true` y `spring.jpa.hibernate.ddl-auto=update`.
 
-4. Probar los endpoints con Postman o desde el navegador:
+4. Probar los endpoints con Postman | El navegador igual puedes usar para probar los endpoints pero necesario descargar la extension Boomerang en tu navegador de preferencia:
 
    ```
    GET http://localhost:8081/api/socios
