@@ -1,22 +1,21 @@
-# Evaluacion2-Desarrollo-Fullstack-I_004V
-## Sistema de Gestión de Bibliotecas Digitales
+# Módulo Administrativo - Sistema de Gestión de Bibliotecas Digitales
 
 ## Integrantes
-- Cristóbal González
-- Javier Cataldo
 - Vicente Barrera
+- Cristóbal Gonzalez
+- Javier Cataldo
 
 ## Descripción
-Sistema de gestión de bibliotecas digitales basado en arquitectura de microservicios con Spring Boot, JPA/Hibernate y MySQL.
+Microservicios del módulo administrativo del sistema de gestión de bibliotecas digitales, desarrollados con Spring Boot, JPA/Hibernate y MySQL.
 
 ## Microservicios
 | Microservicio | Puerto | Descripción |
 |---|---|---|
-| ms-autores | 8081 | Gestión de autores |
-| ms-categorias | 8082 | Gestión de categorías |
-| ms-editoriales | 8083 | Gestión de editoriales |
-| ms-ejemplares | 8084 | Gestión de ejemplares |
-| ms-libros | 8085 | Gestión de libros - consume los otros microservicios |
+| ms-proveedores | 8086 | Gestión de proveedores |
+| ms-compras | 8087 | Gestión de compras |
+| ms-notificaciones | 8088 | Gestión de notificaciones |
+| ms-reportes | 8089 | Gestión de reportes |
+| ms-autenticacion | 8090 | Gestión de autenticación y usuarios |
 
 ## Tecnologías
 - Java 17
@@ -24,7 +23,6 @@ Sistema de gestión de bibliotecas digitales basado en arquitectura de microserv
 - JPA + Hibernate
 - MySQL 8
 - Lombok
-- WebClient (comunicación entre microservicios)
 
 ## Requisitos previos
 - Java 17
@@ -36,6 +34,10 @@ Sistema de gestión de bibliotecas digitales basado en arquitectura de microserv
 ```sql
 CREATE DATABASE gestion_biblioteca;
 ```
-2. Clonar el repositorio
-3. Abrir cada microservicio en VS Code
-4. Ejecutar en cada uno:
+
+## Endpoints principales
+- GET/POST/PUT/DELETE http://localhost:8086/api/proveedores
+- GET/POST/PUT/DELETE http://localhost:8087/api/compras
+- GET/POST/PUT/DELETE http://localhost:8088/api/notificaciones
+- GET/POST/PUT/DELETE http://localhost:8089/api/reportes
+- GET/POST/PUT/DELETE http://localhost:8090/api/usuarios
